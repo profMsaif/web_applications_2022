@@ -12,7 +12,8 @@ urlpatterns = [
     path("register", views.register_request, name="register"),
     path("login", views.login_request, name="login"),
     path("logout", views.logout_request, name="logout"),
-    path("member", views.member, name = "member"),
+    path("member", views.member, name="member"),
+    path("password_reset", views.password_reset_request, name="password_reset"),
 
 
 ]
