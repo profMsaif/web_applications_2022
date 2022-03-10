@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+{% extends "blog/base.html" %} 
 
 {% block content %} 
 
@@ -81,7 +81,7 @@ box-shadow: 0 16px 48px #E3E7EB;
  <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p> 
 
  <p class="card-text">{{post.content|slice:":200" }}</p> 
- <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Read More &rarr;</a> 
+ <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Read More &rarr;</a> 
 
  </div> 
 
@@ -91,7 +91,7 @@ box-shadow: 0 16px 48px #E3E7EB;
 
  </div> 
 
- {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %} 
+ {% block sidebar %} {% include 'blog/sidebar.html' %} {% endblock sidebar %} 
 
  </div> 
 

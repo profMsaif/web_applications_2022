@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+
+    crossorigin="anonymous" /> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+ 
+    <style>
+     body {
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(244,177,190,1) 35%, rgba(0,212,255,1) 100%);
+       
+        
+      } 
+ 
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm  bg-light">
+        
+        
+        <a class="navbar-brand" href="#">HTGAWM Blog </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle = "collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+    
+    
+    <div class="collapse navbar-collapse " id="navbarText">
+        <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Welcome, {{user.username}}</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-item" href="/login">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    </nav>
+  </body>
+</html>
