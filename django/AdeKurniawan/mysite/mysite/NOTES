@@ -1,0 +1,4 @@
+PROBLEMS (5.3.2022): 
+ - Login page does not open for very strange reason. It worked already at first, but suddenly stopped working.
+ - Login button should maybe be added to navigation bar. There was no introductions to do that.
+   Now login is only available by typing localhost:8000/login (expect some problem)
